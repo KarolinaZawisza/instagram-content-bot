@@ -8,20 +8,19 @@ driver = SeleniumConnection.driver
 SeleniumConnection.connect_to_instagram(driver)
 
 instagram = InstagramManager(driver)
-InstagramManager.log_in(instagram)
+instagram.log_in()
 
 try:
     for account in target_accounts:
-        InstagramManager.find_account(instagram, account)
-        InstagramManager.open_followers(instagram)
-        followers = InstagramManager.get_followers(instagram)
-        # InstagramManager.save_followers_names(followers)
-        InstagramManager.close_followers(instagram)
-        # InstagramManager.like_first_post(instagram)
+        instagram.find_account(account)
+        instagram.open_followers()
+        followers = instagram.get_followers()
+        # instagram.save_followers_names(followers)
+        instagram.close_followers()
+        # instagram.like_first_post()
 
 except Exception as exception:
     print(f'{exception}')
-    InstagramManager.quit(instagram)
+    instagram.quit()
 
-InstagramManager.quit(instagram)
-
+instagram.quit()

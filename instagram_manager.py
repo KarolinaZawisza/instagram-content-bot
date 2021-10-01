@@ -1,4 +1,3 @@
-import csv
 from time import sleep
 from selenium.webdriver.common.keys import Keys
 from envr import INSTAGRAM_LOGIN, INSTAGRAM_PASSWORD
@@ -60,4 +59,3 @@ class InstagramManager:
         # sleep(1)
         # self.driver.find_element_by_xpath('/html/body/div[6]/div[2]/div/article/div/div[2]/div/div[2]/section[1]/span[1]/button/div/span/svg').click()
         # self.driver.find_element_by_xpath('/html/body/div[6]/div[3]/button').click()
-
